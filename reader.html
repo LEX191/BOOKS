@@ -86,20 +86,18 @@
         </div>
     </div>
 
-    <iframe id="pdfViewer" width="100%" height="100%" style="border: none;"></iframe>
+    <iframe id="pdfViewer" src="https://raw.githubusercontent.com/LEX191/E-BOOKS/main/tdmdule.pdf" width="100%" height="100%" style="border: none;"></iframe>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const urlParams = new URLSearchParams(window.location.search);
             const bookId = urlParams.get('id');
             const pdfViewer = document.getElementById('pdfViewer');
-
+    
             if (bookId === 'tdmodule') {
-                pdfViewer.src = 'https://docs.google.com/gview?url=https://raw.githubusercontent.com/LEX191/E-BOOKS/main/tdmdule.pdf&embedded=true';
+                pdfViewer.src = "https://raw.githubusercontent.com/LEX191/E-BOOKS/main/tdmdule.pdf"; // Direct GitHub PDF Link
             } else {
-                pdfViewer.src = 'default.html';
+                pdfViewer.src = "default.html";
             }
         });
     </script>
-</body>
-</html>
